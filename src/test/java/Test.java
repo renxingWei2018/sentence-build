@@ -17,10 +17,14 @@ public class Test {
     @org.junit.Test
     public void testNoUserDictionary() {
         // raw data given
-        String givenDictionary = "{i,like,sam,sung,mobile,samsung}";
+        String givenDictionary = "{i,like,sam,sung,mobile,samsung,ice,cream,man go}";
         String userDictionary = null;
         boolean allDictionarWork = false;
         String yourSentenceWithoutSpace = "ilikesamsungmobile";
+
+        App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
+
+        yourSentenceWithoutSpace= "ilikeicecreamandmango";
         App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
     }
 
