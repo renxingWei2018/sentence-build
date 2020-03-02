@@ -1,4 +1,5 @@
-import application.App;
+
+import application.Application;
 import entity.Calculate;
 import entity.CurrentStatus;
 
@@ -22,11 +23,19 @@ public class Test {
         boolean allDictionarWork = false;
         String yourSentenceWithoutSpace = "ilikesamsungmobile";
 
-        App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
+        Application.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
 
         yourSentenceWithoutSpace= "ilikeicecreamandmango";
-        App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
+        Application.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
     }
+
+    @org.junit.Test
+    // testAllSituationsa
+    // 测试所有的情况
+    public void testAllSituations() {
+         Application.doMain(null);
+    }
+
 
     @org.junit.Test
     // testWhithAllDictionary
@@ -37,7 +46,7 @@ public class Test {
         String userDictionary = "{i,like,sam,sung,man go,samsung}";
         boolean allDictionarWork = true;
         String yourSentenceWithoutSpace = "ilikesamsungmobile";
-        App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
+        Application.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
     }
 
     @org.junit.Test
@@ -49,7 +58,7 @@ public class Test {
         String userDictionary = "{i,like,sam,sung,mobile,}";
         boolean allDictionarWork = false;
         String yourSentenceWithoutSpace = "ilikesamsungmobile";
-        App.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
+        Application.printResult(getCalculateObj(givenDictionary,userDictionary,allDictionarWork,yourSentenceWithoutSpace));
     }
 
 
